@@ -1,0 +1,88 @@
+	<!-- Inicio style carrito -->
+TextArea{font-Family:consolas,"courier new",monospace; font-size:9pt; font-color:black}
+
+select {
+font-size:9pt;  
+width: 200px;
+}
+
+.incarri{
+   -webkit-box-shadow: 0px 0px 0px; 
+   -moz-box-shadow: 0px 0px 0px; 
+    box-shadow: 0px 0px 0px; 
+    border: 0px transparent;
+    background-color:#c6d9ec;
+}
+
+/*
+input{
+ 	font-size:10pt; color:black; 
+	height:20px;  
+	padding: 0px;	
+	border: 1px solid black;
+	cursor: pointer;
+}
+*/
+
+#box{
+    font-size: 10px;
+    line-height: 20px;
+    position: fixed;
+    z-index: 500;
+    border-radius: 10px 10px 10px 10px;
+    top: 220px;
+}
+#tab{
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 500;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#tab li span{
+    display: block;
+    padding: 0 5px;
+    position: relative;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#links{
+    width: 80px;
+    padding: 0px;
+    float: left;
+/*    border-left: 1px solid #B4B8BB; */
+    border-radius: 5px 5px 5px 5px;
+}
+
+.show, .hide, .block, .none{
+    /* we specify the transition length for hiding and showing */
+    transition: margin-right .4s ease-in;
+    -webkit-transition: margin-right .4s ease-in;
+    border-radius: 5px 5px 5px 5px;
+}
+#arrow, .bt{
+    cursor: pointer;
+}
+
+
+#ventana-flotante{
+    width: 290px; 
+    float: left;
+    z-index: 9000;
+    transition: background .3s linear;
+    border-radius: 10px 10px 10px 10px;
+    background: #306196;
+}
+
+#arrow, .ventana-flotante{
+    cursor: pointer;
+}
+B1{
+ 	font-size:8pt; 
+}
+/* fin style carrito */
+
+
