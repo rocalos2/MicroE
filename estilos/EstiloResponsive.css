@@ -308,7 +308,7 @@ P13{ font-size: 18px; }
 
 /*-------------------------------------------------------------*/
 @media only screen and (max-width:800px) {  /* phones: horizontal */
-* {font-size: 10px;}
+* {font-size: 20px;}
 a {font-size: 11px;} 
 .barralogo , .barrah {width: 100%;}
 .logo { width: 179px;}
