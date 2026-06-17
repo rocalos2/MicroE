@@ -250,7 +250,7 @@ a {font-size: 16px;}
 .show {right: 25px; top: 54px; }
 #box.show {right: 512px; top:134px;}
 #box.hide {right: -110px; top:220px;}
-
+h5{font-size: 30px;    font-family: sans-serif;}
 /* td{max-width:30%} */
 
 .slideshow-muesart {width: 800px;}
@@ -310,6 +310,7 @@ P13{ font-size: 18px; }
 @media only screen and (max-width:800px) {  /* phones: horizontal */
 * {font-size: 20px;}
 a {font-size: 11px;} 
+h5{font-size: 15px;    font-family: sans-serif;}
 .barralogo , .barrah {width: 100%;}
 .logo { width: 179px;}
 /*   Contenedor de google maps y datos de contacto */
@@ -374,6 +375,7 @@ font-size: 12px;
 width: auto;
 }
 a {font-size: 9px;} 
+h5{font-size: 12px;    font-family: sans-serif;}
 .tdartic {width: 30%; font-size: 10px;}
 .barralogo , .barrah {width: 100%;}
 /* .logo {height: 35px;} */
