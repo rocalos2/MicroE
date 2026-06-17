@@ -51,9 +51,9 @@ window.onclick = function(event) {
               <a href="novedades.html">Novedades</a>
               <a href="flota.html">Flota Este de Argentina</a>
               <a href="regatas.html">Regatas de la zona Este</a>
-           <a href="Micro-Class-Rules-Vigentes-desde-22-05-23 (Ingles con fotos).pdf">Reglamento de la clase en inglescon fotos</a>
-           <a href="Micro-Class-Rules-Vigentes-desde-22-05-23 (EN REVISIoN).pdf">Reglamento de la clase traducido en revisi&oacute;n sin fotos</a>
-           <a href="Adecuacion-a-Reglamento-Internacional-Actualizacion-Abril-2025.pdf">Adecuacio&acute;n a reglamento internacional</a>
+           <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (Ingles con fotos).pdf">Reglamento de la clase en inglescon fotos</a>
+           <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (EN REVISIoN).pdf">Reglamento de la clase traducido en revisi&oacute;n sin fotos</a>
+           <a href="documentos/Adecuacion-a-Reglamento-Internacional-Actualizacion-Abril-2025.pdf">Adecuacio&acute;n a reglamento internacional</a>
          </div>
        </div>
       </td> 
@@ -70,121 +70,8 @@ window.onclick = function(event) {
     </tr>
   </tbody></table>
 </div>
-<!--     es para que en muesart no muestre el carrito vacio por falta de hacetablaproductos       -->
-<div id="pij">
-</div>
+
 <!--      hasta aca deber¡a esta en todos los encabezados       -->
 
-<script>
-   document.getElementById('titulo').value='index1.htm'
-</script>
-<center>
-
-<div class="slideshow-muesart">
-<center>
-<div class="slideshow-muesart">
-
-<!--     INICIO DE SLIDER -->
-
-
-<div class="slideshow-container">
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">1 / 8</div> -->
-     <a href="https://www.facebook.com/clubamistadmarina/reels/?_rdr"><img class="slideshow-imagen" src="imagenes/CAM.jpg"></a>
-   </div>
-
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">2 / 8</div> -->
-     <a href="https://cvr.com.ar/"><img class="slideshow-imagen" src="imagenes/cvr.jpg"></a>
-   </div>
-
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">3 / 8</div> -->
-     <a href="https://ycr.com.ar/"><img class="slideshow-imagen" src="imagenes/ycr.png"></a>
-   </div>
-
-   <div class="mySlides fade" style="display: block;">
-    <!-- <div class="numbertext">4 / 8</div> -->
-     <a href="https://bohn.ar/"><img class="slideshow-imagen" src="imagenes/bohn.webp"></a>
-   </div>
-
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">5 / 8</div> -->
-     <a href="index.html"><img class="slideshow-imagen" src="estilos/05.PNG"></a>
-   </div>
-
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">6 / 8</div> -->
-     <a href="index.html"><img class="slideshow-imagen" src="estilos/06.PNG"></a>
-   </div>
-
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">7 / 8</div> -->
-     <a href="index.html"><img class="slideshow-imagen" src="estilos/07.PNG"></a>
-   </div>
-
-
-   <div class="mySlides fade" style="display: none;">
-    <!-- <div class="numbertext">8 / 8</div> -->
-     <a href="index.html"><img class="slideshow-imagen" src="estilos/08.PNG"></a>
-   </div>
-
-
-</div>
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot active"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-</div></center>
-<!--  FIN SLIDER  -->
-<!-- CierraRubroHTM -->
-<form id="formulariocarrito" action="http://intercalza.dynu.net:9088/cgi-bin/carrin.exe" method="POST">
-<div id="box" class="hide" style="display: none;">
-  <ul id="tab" style="display: none;">
-    <li>
-      <img class="lgico" id="arrow" onclick="toggle(&#39;box&#39;)" src="estilos/CARRITO.png">
-    </li><li>
-  </li></ul>
-  <div id="links">
-    <div id="ventana-flotante" style="display: none;">          <!-- ventana-flotante prueba 2-->
-      <input type="button" value="Borrar" onclick="vacia();" style="border-width:1px; font-size:10pt; color:white;">
-      <input type="submit" value="Modifica/Termina" onclick="envia();" style="border-width:1px; font-size:10pt; color:white;" class="moditer">
-      <input type="hidden" name="VieneDeHTML" value="" id="cliente"><br>
-      <textarea rows="6" cols="80" id="carrito" name="carrin" readonly="readonly"></textarea>
-    </div>     <!-- ventana-flotante -->
-  </div>
-</div>
-<input type="hidden" name="pruebadetitulo" value="INDEX1.HTM">
-</form>
-
-
 </div></center></body></html>
 
