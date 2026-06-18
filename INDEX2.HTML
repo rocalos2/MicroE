@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--  saved from url=(0042)http://intercalza.dynu.net:9088/index1.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="estilos/carrin.js"></script>
+<link rel="shortcut icon" href="imagenes/Logo_Micro_Class.svg">
+
+<script>
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<link rel="stylesheet" href="estilos/EstiloResponsive.css">
+<link rel="stylesheet" href="estilos/EstiloSlider.css">
+<link rel="stylesheet" href="estilos/EstiloCarri.css">
+<link rel="stylesheet" href="estilos/DROPDOWN.CSS">
+<link rel="stylesheet" href="estilos/EstiloSliderMuestra.css">
+<link rel="shortcut icon" href="http://intercalza.dynu.net:9088/images/favicon.GIF">
+
+</head>
+
+<body style="background-color:#fff;">
+
+<div class="fencabe" style="width:100%; background-color: #79abe1;">
+  <table class="barralogo">
+    <tbody><tr>
+
+            <td> 
+       <div class="dropdown">
+         <img src="imagenes/menu.png" style="float:left;" onclick="myFunction()" class="dropbtn">
+         <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">Inicio</a>
+              <a href="novedades.html">Novedades</a>
+              <a href="documentos/FlotaZonaEste.pdf">Flota zona Este de Argentina</a>
+              <a href="regatas.html">Regatas de la zona Este</a>
+           <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (Ingles con fotos).pdf">Reglamento de la clase en inglescon fotos</a>
+           <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (EN REVISIoN).pdf">Reglamento de la clase traducido en revisi&oacute;n sin fotos</a>
+           <a href="documentos/Adecuacion-a-Reglamento-Internacional-Actualizacion-Abril-2025.pdf">Adecuacio&acute;n a reglamento internacional</a>
+         </div>
+       </div>
+      </td> 
+
+      <TD style="color:white;font-family: sans-serif; WIDTH: 67%;font-weight: bolder;text-align: center;font-size:larger;">
+          MICRO CUPPER CLASS ARGENTINA ZONA ESTE
+      </TD>
+
+
+      <td style="color:white;font-family: sans-serif;FONT-SIZE: 26PX;WIDTH: 25%;">
+        <a href="index.html">
+          <img class="logo" src="imagenes/Logo_Micro_Class.svg">
+        </a>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+<!--     es para que en muesart no muestre el carrito vacio por falta de hacetablaproductos       -->
+<div id="pij">
+</div>
+
+<!--      hasta aca deber¡a esta en todos los encabezados 
+
+
+
+
+<!--      hasta aca deber¡a esta en todos los encabezados       -->
+
+
+<center>
+
+<a href=novedades.html>
+  <h1> CONSULTE AQUÍ LAS NOVEDADES  </h1>
+</a>
+<div class="slideshow-muesart">
+<center>
+<div class="slideshow-muesart">
+
+<!--     INICIO DE SLIDER -->
+
+
+<div class="slideshow-container">
+   <div class="mySlides fade" style="display: none;">
+    <!-- <div class="numbertext">1 / 8</div> -->
+     <a href="https://www.facebook.com/clubamistadmarina/reels/?_rdr"><img class="slideshow-imagen" src="imagenes/CAM.jpg"></a>
+   </div>
+
+   <div class="mySlides fade" style="display: none;">
+    <!-- <div class="numbertext">2 / 8</div> -->
+     <a href="https://cvr.com.ar/"><img class="slideshow-imagen" src="imagenes/cvr.jpg"></a>
+   </div>
+
+   <div class="mySlides fade" style="display: none;">
+    <!-- <div class="numbertext">3 / 8</div> -->
+     <a href="https://ycr.com.ar/"><img class="slideshow-imagen" src="imagenes/ycr.png"></a>
+   </div>
+
+   <div class="mySlides fade" style="display: block;">
+    <!-- <div class="numbertext">4 / 8</div> -->
+     <a href="https://bohn.ar/"><img class="slideshow-imagen" src="imagenes/bohn.webp"></a>
+   </div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot active"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</div></center>
+<!--  FIN SLIDER  -->
+<!-- CierraRubroHTM -->
+
+</div></center></body></html>
