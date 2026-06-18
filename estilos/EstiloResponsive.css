@@ -335,7 +335,7 @@ video {height: 200px;}
 a.ltabpro {font-size: 12px;}
 .slideshow-muesart {width: 100%; margin-top: 30px;}
 .slideshow-container {width: 100%;}
-.mySlides { width: 100%; }
+.mySlides { width: fit-content; }
 .imgsl    { height:280px; }
 .tablacarri {width: max-content; width: -moz-fit-content; font-size: 9pt;}
 P6 { font-size: 24px;color:GREEN; }
@@ -404,7 +404,7 @@ P3{font-size: 12px;}
   .pdf {height: 380px;}
   .slideshow-muesart {width: 100%;}
   .slideshow-container {width: 100%;}
-  .mySlides { width: 100%;}
+   fit-content;}
   .imgsl { height: auto; max-width: 70%;  }
 
 P6 { font-size: 24px;color:GREEN; }
