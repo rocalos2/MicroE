@@ -376,8 +376,13 @@ font-size: 12px;
 width: auto;
 /*  */width: stretch;
 }
-a {font-size: 9px;display: ruby-text;} 
-h5{font-size: 12px;    font-family: sans-serif;}
+a {font-size: 9px;} 
+	h5 {
+        font-size: 12px;
+        font-family: sans-serif;
+        width: max-content;
+        display: grid;
+    }
 .tdartic {width: 30%; font-size: 10px;}
 .barralogo , .barrah {width: 100%;}
 /* .logo {height: 35px;} */
