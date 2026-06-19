@@ -33,7 +33,7 @@ window.onclick = function(event) {
 <link rel="stylesheet" href="estilos/EstiloCarri.css">
 <link rel="stylesheet" href="estilos/DROPDOWN.CSS">
 <link rel="stylesheet" href="estilos/EstiloSliderMuestra.css">
-<link rel="shortcut icon" href="http://intercalza.dynu.net:9088/images/favicon.GIF">
+<link rel="shortcut icon" href="imagenes/Logo_Micro_Class.svg">
 
 </head>
 
@@ -49,7 +49,7 @@ window.onclick = function(event) {
          <div id="myDropdown" class="dropdown-content">
               <a href="index.html">Inicio</a>
               <a href="novedades.html">Novedades</a>
-              <a href="documentos/flotazonaeste.pdf">Flota Este de Argentina</a>
+              <a href="documentos/FlotaZonaEste.pdf">Flota zona Este de Argentina</a>
               <a href="regatas.html">Regatas de la zona Este</a>
            <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (Ingles con fotos).pdf">Reglamento de la clase en inglescon fotos</a>
            <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (EN REVISIoN).pdf">Reglamento de la clase traducido en revisi&oacute;n sin fotos</a>
@@ -58,10 +58,14 @@ window.onclick = function(event) {
        </div>
       </td> 
 
-      <TD style="color:white;font-family: sans-serif; WIDTH: 67%;font-weight: bolder;text-align: center;font-size:larger;">
+
+
+      <TD id='titulo' style="color:white;font-family: sans-serif; WIDTH: 67%;font-weight: bolder;text-align: center;">
+
+
+
           MICRO CUPPER CLASS ARGENTINA ZONA ESTE
       </TD>
-
 
       <td style="color:white;font-family: sans-serif;FONT-SIZE: 26PX;WIDTH: 25%;">
         <a href="index.htm">
@@ -76,63 +80,12 @@ window.onclick = function(event) {
 </div>
 <!--      hasta aca deber¡a esta en todos los encabezados       -->
 
-<script>
-   document.getElementById('titulo').value='index1.htm'
-</script>
 <center>
-
-<div class="slideshow-muesart">
-<center>
-<div class="slideshow-muesart">
-
-
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-</div></center>
-<!--  FIN SLIDER  -->
-<!-- CierraRubroHTM -->
-<form id="formulariocarrito" action="http://intercalza.dynu.net:9088/cgi-bin/carrin.exe" method="POST">
-<div id="box" class="hide" style="display: none;">
-  <ul id="tab" style="display: none;">
-    <li>
-      <img class="lgico" id="arrow" onclick="toggle(&#39;box&#39;)" src="estilos/CARRITO.png">
-    </li><li>
-  </li></ul>
-  <div id="links">
-    <div id="ventana-flotante" style="display: none;">          <!-- ventana-flotante prueba 2-->
-      <input type="button" value="Borrar" onclick="vacia();" style="border-width:1px; font-size:10pt; color:white;">
-      <input type="submit" value="Modifica/Termina" onclick="envia();" style="border-width:1px; font-size:10pt; color:white;" class="moditer">
-      <input type="hidden" name="VieneDeHTML" value="" id="cliente"><br>
-      <textarea rows="6" cols="80" id="carrito" name="carrin" readonly="readonly"></textarea>
-    </div>     <!-- ventana-flotante -->
-  </div>
-</div>
-<input type="hidden" name="pruebadetitulo" value="INDEX1.HTM">
-</form>
 <H5>
            <a href="sininfo.html">Regatas de CLUB AMISTAD MARINA</a><br>
            <a href="https://www.cvr.com.ar/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-18-at-2.50.08-PM-819x1024.jpeg">Regatas Club de Velas de Rosario</a><br>
            <a href="https://www.ycr.com.ar/p/phrf.html">Regatas Yatch Club Rosario</a><br>
 </H5>
+</center>
 </div></center></body></html>
 
