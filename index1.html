@@ -33,7 +33,7 @@ window.onclick = function(event) {
 <link rel="stylesheet" href="estilos/EstiloCarri.css">
 <link rel="stylesheet" href="estilos/DROPDOWN.CSS">
 <link rel="stylesheet" href="estilos/EstiloSliderMuestra.css">
-<link rel="shortcut icon" href="http://intercalza.dynu.net:9088/images/favicon.GIF">
+<link rel="shortcut icon" href="imagenes/Logo_Micro_Class.svg">
 
 </head>
 
@@ -58,13 +58,17 @@ window.onclick = function(event) {
        </div>
       </td> 
 
+
+
       <TD id='titulo' style="color:white;font-family: sans-serif; WIDTH: 67%;font-weight: bolder;text-align: center;">
+
+
+
           MICRO CUPPER CLASS ARGENTINA ZONA ESTE
       </TD>
 
-
       <td style="color:white;font-family: sans-serif;FONT-SIZE: 26PX;WIDTH: 25%;">
-        <a href="index.html">
+        <a href="index.htm">
           <img class="logo" src="imagenes/Logo_Micro_Class.svg">
         </a>
       </td>
@@ -74,88 +78,74 @@ window.onclick = function(event) {
 <!--     es para que en muesart no muestre el carrito vacio por falta de hacetablaproductos       -->
 <div id="pij">
 </div>
+<!--      hasta aca deber¡a esta en todos los encabezados       -->
 
-<!--      hasta aca deber¡a esta en todos los encabezados 
+
 <center>
-   <h1>
-      NOVEDADES <br>
-      <img src="imagenes/maronna.png" style="width: stretch;">
-   </h1>
-</center>
+
+<a href=novedades.html>
+  <h1> Haga click aca&acute; para conocer las novedades </h1>
+</a>
+<div class="slideshow-muesart">
+<center>
+<div class="slideshow-muesart">
+
+<!--     INICIO DE SLIDER -->
 
 
-<!-- 1. HTML: Imagen disparadora y Modal -->
-<img id="myImg" alt="" >
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
+<div class="slideshow-container">
+   <div class="mySlides fade" style="display: none;">
+    <!-- <div class="numbertext">1 / 8</div> -->
+     <a href="https://www.facebook.com/clubamistadmarina/reels/?_rdr"><img class="slideshow-imagen" src="imagenes/CAM.jpg"></a>
+   </div>
+
+   <div class="mySlides fade" style="display: none;">
+    <!-- <div class="numbertext">2 / 8</div> -->
+     <a href="https://cvr.com.ar/"><img class="slideshow-imagen" src="imagenes/cvr.jpg"></a>
+   </div>
+
+   <div class="mySlides fade" style="display: none;">
+    <!-- <div class="numbertext">3 / 8</div> -->
+     <a href="https://ycr.com.ar/"><img class="slideshow-imagen" src="imagenes/ycr.png"></a>
+   </div>
+
+   <div class="mySlides fade" style="display: block;">
+    <!-- <div class="numbertext">4 / 8</div> -->
+     <a href="https://bohn.ar/"><img class="slideshow-imagen" src="imagenes/bohn.webp"></a>
+   </div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot active"></span> 
+  <span class="dot"></span> 
 </div>
 
-<!-- 2. CSS: Estilos para el modal -->
-<style>
-.modal {
-  display: flex;             /* Activa Flexbox */
-  align-items: center;       /* Centrado vertical */
-  
-  /* Propiedades estándar del modal */
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(206 175 249 / 90%);
-}
-
-.modal-content {
-    margin: auto;
-    top: 70px;
-    position: absolute;
-    top: 60px;
-    color: #f1f1f1;
-    width: 100%;
-}
-
-.close {
-  position: absolute;
-  top: 15px; right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  cursor: pointer;
-}
-</style>
-
-<!-- 3. JavaScript: Lógica de apertura y cierre -->
 <script>
+var slideIndex = 0;
+showSlides();
 
-var modal = document.getElementById("myModal");
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-
-img.onclick = function() {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onload = function(){
-    modal.style.display = "block";
-    modalImg.src = "imagenes/maronnapopup.png";
-    captionText.innerHTML = img.alt;
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
+</div></center>
+<!--  FIN SLIDER  -->
+<!-- CierraRubroHTM -->
 
-
-
-</body>
-
-</html>
+</div></center></body></html>
 
