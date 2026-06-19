@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--  saved from url=(0042)http://intercalza.dynu.net:9088/index1.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="estilos/carrin.js"></script>
+<link rel="shortcut icon" href="imagenes/Logo_Micro_Class.svg">
+
+<script>
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<link rel="stylesheet" href="estilos/EstiloResponsive.css">
+<link rel="stylesheet" href="estilos/EstiloSlider.css">
+<link rel="stylesheet" href="estilos/EstiloCarri.css">
+<link rel="stylesheet" href="estilos/DROPDOWN.CSS">
+<link rel="stylesheet" href="estilos/EstiloSliderMuestra.css">
+<link rel="shortcut icon" href="http://intercalza.dynu.net:9088/images/favicon.GIF">
+
+</head>
+
+<body style="background-color:#fff;">
+
+<div class="fencabe" style="width:100%; background-color: #79abe1;">
+  <table class="barralogo">
+    <tbody><tr>
+
+            <td> 
+       <div class="dropdown">
+         <img src="imagenes/menu.png" style="float:left;" onclick="myFunction()" class="dropbtn">
+         <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">Inicio</a>
+              <a href="novedades.html">Novedades</a>
+              <a href="documentos/FlotaZonaEste.pdf">Flota zona Este de Argentina</a>
+              <a href="regatas.html">Regatas de la zona Este</a>
+           <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (Ingles con fotos).pdf">Reglamento de la clase en inglescon fotos</a>
+           <a href="documentos/Micro-Class-Rules-Vigentes-desde-22-05-23 (EN REVISIoN).pdf">Reglamento de la clase traducido en revisi&oacute;n sin fotos</a>
+           <a href="documentos/Adecuacion-a-Reglamento-Internacional-Actualizacion-Abril-2025.pdf">Adecuacio&acute;n a reglamento internacional</a>
+         </div>
+       </div>
+      </td> 
+
+      <TD id='titulo' style="color:white;font-family: sans-serif; WIDTH: 67%;font-weight: bolder;text-align: center;">
+          MICRO CUPPER CLASS ARGENTINA ZONA ESTE
+      </TD>
+
+
+      <td style="color:white;font-family: sans-serif;FONT-SIZE: 26PX;WIDTH: 25%;">
+        <a href="index.html">
+          <img class="logo" src="imagenes/Logo_Micro_Class.svg">
+        </a>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+<!--     es para que en muesart no muestre el carrito vacio por falta de hacetablaproductos       -->
+<div id="pij">
+</div>
+
+<!--      hasta aca deber¡a esta en todos los encabezados 
+<center>
+   <h1>
+      NOVEDADES <br>
+      <img src="imagenes/maronna.png" style="width: stretch;">
+   </h1>
+</center>
+
+
+<!-- 1. HTML: Imagen disparadora y Modal -->
+<img id="myImg" alt="" >
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<!-- 2. CSS: Estilos para el modal -->
+<style>
+.modal {
+  display: flex;             /* Activa Flexbox */
+  align-items: center;       /* Centrado vertical */
+  
+  /* Propiedades estándar del modal */
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(206 175 249 / 90%);
+}
+
+.modal-content {
+    margin: auto;
+    top: 70px;
+    position: absolute;
+    top: 60px;
+    color: #f1f1f1;
+    width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 15px; right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  cursor: pointer;
+}
+</style>
+
+<!-- 3. JavaScript: Lógica de apertura y cierre -->
+<script>
+
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function() {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onload = function(){
+    modal.style.display = "block";
+    modalImg.src = "imagenes/maronnapopup.png";
+    captionText.innerHTML = img.alt;
+}
+</script>
+
+
+
+</body>
+
+</html>
+
