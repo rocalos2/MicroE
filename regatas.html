@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+<html lang="es">
+<head>
   <meta charset="UTF-8">
+  <!-- OBLIGATORIO PARA CELULARES Y TABLETS -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sitio oficial de la Clase Micro Cupper Argentina - Flota Zona Este. Información sobre regatas, reglamentos y novedades.">
-  <title>Micro Cupper Class Argentina | Zona Este</title>
+  <title>Micro Cupper Class Argentina - Zona Este</title>
   
-  <!-- Favicon corregido -->
-  <link rel="icon" type="image/svg+xml" href="imagenes/Logo_Micro_Class.svg">
+  <link rel="icon" href="imagenes/Logo_Micro_Class.svg" type="image/svg+xml">
 
   <style>
-    /* ==========================================================================
-       1. VARIABLES Y ESTILOS GENERALES
-       ========================================================================== */
-    :root {
-      --primary-color: #0b3c5d;   /* Azul naval */
-      --secondary-color: #328cc1; /* Azul claro */
-      --accent-color: #d9b310;    /* Dorado/Amarillo vela */
-      --text-color: #1d2731;      /* Gris oscuro para lectura */
-      --bg-color: #f9f9f9;        /* Blanco suave */
-      --white: #ffffff;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    }
-
+    /* ==============================================
+       1. ESTILOS GENERALES Y RESET
+       ============================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -30,298 +19,298 @@
     }
 
     body {
-      font-family: var(--font-family);
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     a {
       text-decoration: none;
       color: inherit;
-      font-size: xx-large;
     }
 
-    /* ==========================================================================
-       2. CABECERA Y NAVEGACIÓN (HEADER)
-       ========================================================================== */
-    .header {
-      background-color: var(--primary-color);
-      color: var(--white);
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    /* ==============================================
+       2. HEADER / ENCABEZADO
+       ============================================== */
+    header {
+      background-color: #0b2545;
+      color: #ffffff;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .header-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
       gap: 1rem;
     }
 
-    .brand-title {
-      font-size: 2.25rem
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .brand img {
+      width: 60px;
+      height: auto;
+    }
+
+    .brand h1 {
+      font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: 0.5px;
-      text-align: center;
-      flex: 1;
     }
 
-    .logo-link img {
-      height: 160px;
-      width: auto;
+    .brand h1 small {
       display: block;
-      transition: transform 0.2s ease;
+      font-size: 0.85rem;
+      color: #8da9c4;
+      font-weight: 400;
     }
 
-    .logo-link img:hover {
-      transform: scale(1.05);
+    /* Botón Hamburguesa (Móviles) */
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: 1px solid #8da9c4;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
-    /* Menú Principal */
-    .navbar {
+    /* Navegación */
+    nav {
+      width: 100%;
+      display: none; /* Oculto por defecto en móviles */
+    }
+
+    nav.active {
+      display: block; /* Muestra el menú al tocar el botón hamburguesa */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
       width: 100%;
     }
 
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      color: var(--white);
-      font-weight: 500;
-      padding: 0.5rem 0.75rem;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
+    nav a {
       display: block;
-      font-size: x-large;
+      padding: 0.75rem 1rem;
+      color: #e0e1dd;
+      border-radius: 4px;
+      transition: background-color 0.2s;
     }
 
-    .nav-link:hover {
-      background-color: rgba(255, 255, 255, 0.15);
+    nav a:hover {
+      background-color: #134074;
+      color: #fff;
     }
 
-    /* Submenú desplegable con CSS puro */
+    /* Menú Desplegable (Dropdown) */
     .dropdown {
       position: relative;
     }
 
     .dropdown-menu {
       display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: var(--white);
-      color: var(--text-color);
-      box-shadow: var(--shadow);
+      background-color: #134074;
       border-radius: 4px;
-      min-width: 280px;
-      list-style: none;
-      padding: 0.5rem 0;
-      z-index: 100;
+      padding-left: 1rem;
     }
 
-    .dropdown-menu a {
-      display: block;
-      padding: 0.6rem 1rem;
-      font-size: 0.9rem;
-      color: var(--text-color);
-      transition: background-color 0.2s;
-    }
-
-    .dropdown-menu a:hover {
-      background-color: #f0f4f8;
-      color: var(--primary-color);
-    }
-
-    /* Mostrar submenú en Hover */
-    .dropdown:hover .dropdown-menu {
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
       display: block;
     }
 
-    /* ==========================================================================
-       3. CONTENIDO PRINCIPAL (MAIN & CTA)
-       ========================================================================== */
-    .main-content {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    /* ==============================================
+       3. CONTENIDO PRINCIPAL (MAIN)
+       ============================================== */
+    main {
       flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
     }
 
-    /* Hero / Llamado a la Acción */
-    .hero-banner {
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      color: var(--white);
-      padding: 3rem 1.5rem;
+    .hero-section {
+      background-color: #ffffff;
+      padding: 2.5rem 1.5rem;
       border-radius: 8px;
       text-align: center;
-      box-shadow: var(--shadow);
-      margin-bottom: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    .hero-banner h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+    .hero-section h1 {
+      font-size: 1.6rem;
+      color: #0b2545;
+      margin-bottom: 1.2rem;
     }
 
     .btn-cta {
       display: inline-block;
-      background-color: var(--accent-color);
-      color: var(--primary-color);
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
+      background-color: #134074;
+      color: #ffffff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.2s;
     }
 
     .btn-cta:hover {
-      background-color: #f1c40f;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      background-color: #0b2545;
     }
 
-    /* Sección de Clubes y Sponsors */
+    /* Sección de Auspiciantes / Clubes */
     .sponsors-section {
       text-align: center;
     }
 
     .sponsors-section h2 {
       font-size: 1.4rem;
-      color: var(--primary-color);
+      color: #0b2545;
       margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     .sponsors-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 1.5rem;
       align-items: center;
       justify-items: center;
     }
 
-    .sponsor-card {
-      background: var(--white);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      width: 100%;
-      height: 120px;
+    .sponsors-grid a {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      width: 100%;
+      height: 100px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
 
-    .sponsor-card:hover {
+    .sponsors-grid a:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
-    .sponsor-card img {
-      max-width: 100%;
-      max-height: 90px;
+    .sponsors-grid img {
+      max-height: 70px;
       object-fit: contain;
     }
 
-    /* ==========================================================================
-       4. PIE DE PÁGINA (FOOTER)
-       ========================================================================== */
-    .footer {
-      background-color: var(--primary-color);
-      color: var(--white);
+    /* ==============================================
+       4. FOOTER / PIE DE PÁGINA
+       ============================================== */
+    footer {
+      background-color: #0b2545;
+      color: #8da9c4;
       text-align: center;
-      padding: 1.5rem;
-      margin-top: auto;
+      padding: 1.5rem 1rem;
       font-size: 0.9rem;
+      margin-top: auto;
     }
 
-    /* ==========================================================================
-       5. ADAPTABILIDAD (RESPONSIVE)
-       ========================================================================== */
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        text-align: center;
+    /* ==============================================
+       5. MEDIA QUERIES (TABLETS Y PANTALLAS GRANDES)
+       ============================================== */
+    
+    /* Tablets en adelante (>= 768px) */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none; /* Ocultar botón hamburguesa */
       }
 
-      .nav-menu {
-        flex-direction: column;
+      .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .brand {
+        text-align: left;
+      }
+
+      nav {
+        display: block !important;
+        width: auto;
+      }
+
+      nav ul {
+        flex-direction: row;
+        align-items: center;
         gap: 0.5rem;
       }
 
       .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 4px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 260px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        padding-left: 0;
+        z-index: 1000;
       }
 
-      .dropdown-menu a {
-        color: var(--white);
-        text-align: center;
-      }
-
-      .hero-banner h1 {
-        font-size: 1.4rem;
+      .hero-section h1 {
+        font-size: 2.2rem;
       }
 
       .sponsors-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- CABECERA DE NAVEGACIÓN -->
-  <header class="header">
+  <header>
     <div class="header-container">
-      
-      <!-- Título Principal -->
-      <h1 class="brand-title">MICRO CUPPER CLASS ARGENTINA<br><small>ZONA ESTE</small></h1>
+      <div class="brand">
+        <a href="index.html" title="Inicio">
+          <img src="imagenes/Logo_Micro_Class.svg" alt="Logo Micro Class Argentina">
+        </a>
+        <h1>MICRO CUPPER CLASS ARGENTINA<br><small>ZONA ESTE</small></h1>
+      </div>
 
-      <!-- Logo Oficial -->
-      <a href="index.html" class="logo-link" title="Inicio">
-        <img src="imagenes/Logo_Micro_Class.svg" alt="Logo Micro Class Argentina">
-      </a>
+      <!-- Botón de menú para celulares -->
+      <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
 
-      <!-- Menú de Navegación -->
-      <nav class="navbar" aria-label="Navegación principal">
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-          <li class="nav-item"><a href="novedades.html" class="nav-link">Novedades</a></li>
-          <li class="nav-item"><a href="regatas.html" class="nav-link">Regatas Zona Este</a></li>
-          <li class="nav-item"><a href="documentos/FlotaZonaEste.pdf" class="nav-link" target="_blank">Flota Zona Este</a></li>
+      <nav id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="novedades.html">Novedades</a></li>
+          <li><a href="regatas.html">Regatas Zona Este</a></li>
+          <li><a href="documentos/FlotaZonaEste.pdf" target="_blank">Flota Zona Este</a></li>
           
-          <!-- Menú Desplegable de Reglamentos -->
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">Reglamentos ▾</a>
+          <li class="dropdown">
+            <a href="#">Reglamentos ▾</a>
             <ul class="dropdown-menu">
               <li>
                 <a href="documentos/micro-class-rules-ingles.pdf" target="_blank">
@@ -342,11 +331,10 @@
           </li>
         </ul>
       </nav>
-
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+<!-- CONTENIDO PRINCIPAL -->
   <main class="main-content">
 
     
@@ -359,11 +347,16 @@
 </center>
   </main>
 
-  <!-- PIE DE PÁGINA -->
-  <footer class="footer">
+  <footer>
     <p>© Micro Cupper Class Argentina - Zona Este. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
-
-</body></html>
+</body>
+</html>
